@@ -1,0 +1,276 @@
+.retirement-container {
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.retirement-main-heading {
+  color: #173B45;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  flex-grow: 1;
+   
+}
+
+.selected-filters-heading {
+  text-align: center;
+  color: #173B45;
+  margin: 20px auto;
+  font-size: 20px;
+  padding: 10px;
+  max-width: 1200px;
+}
+
+.filters-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 150px;
+  background-color: white;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #80C4E9;
+  box-shadow: 0 0 3px rgba(128, 196, 233, 0.3);
+}
+
+.filter-select:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Remove .submit-button styles as they're no longer needed */
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0f2930;
+}
+
+.table-content {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.retirement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  min-width: 800px;
+}
+
+.retirement-table th,
+.retirement-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.retirement-table th {
+  color: #173B45;
+  font-weight: 600;
+}
+
+.retirement-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.retirement-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.print-button {
+  padding: 8px 12px;
+  background-color: #173B45;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.print-button:hover {
+  background-color: #0f2930;
+}
+
+.print-content {
+  display: none;
+}
+
+/* Print styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 0 !important;
+  }
+
+  .print-content {
+    display: block !important;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: auto;
+  }
+
+  .doc-header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .restricted-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .daily-orders {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .header-line {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px 0;
+  }
+
+  .title-section {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .retirement-heading {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .retirement-subheading {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .table-wrapper {
+    margin: 15px 0 0 0;
+    page-break-after: avoid;
+    page-break-before: avoid;
+  }
+
+  .retirement-table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+    margin-bottom: 0;
+  }
+
+  .retirement-table th,
+  .retirement-table td {
+    border: 1px solid black;
+    padding: 4px 6px;
+    font-size: 11px;
+    text-align: left;
+  }
+
+  /* Remove other print styles to avoid conflicts */
+  .print-header, .org-details, .doc-title, .page-details,
+  .print-footer, .signature, .restricted-footer {
+    display: none !important;
+  }
+
+  /* Hide all non-print elements */
+  .filters-container, .print-button, .reset-button, .navbar,
+  .header-container, .selected-filters-heading, .table-content {
+    display: none !important;
+  }
+
+  /* Remove any bottom margins/padding from last elements */
+  .table-wrapper:last-child,
+  .retirement-table:last-child,
+  .retirement-table tr:last-child td {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Force page break control */
+  .print-content::after {
+    content: none !important;
+  }
+}
+
+.reset-button {
+  padding: 8px 20px;
+  background-color: #173B45;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  /* Add these properties to align with filters */
+  width: fit-content;
+  margin-left: auto;
+  align-self: center;
+}
+
+.reset-button:hover {
+  background-color: #0f2930;
+}
+
+.no-filter-message {
+  text-align: center;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
