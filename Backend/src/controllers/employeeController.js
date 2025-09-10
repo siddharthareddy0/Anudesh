@@ -83,7 +83,7 @@ export const createEmployee = async (req, res) => {
         // Insert Family Members
         for (const familyMember of formData.familyMembers) {
             const familyMemberQuery = `
-                INSERT INTO family_members (gpf_pran, name, dob, relationship, category, remarks)
+                INSERT INTO family_members (army_number , name, dob, relationship, category, remarks)
                 VALUES ($1, $2, TO_DATE($3, 'YYYY-MM-DD'), $4, $5, $6)
             `;
             const familyMemberValues = [
