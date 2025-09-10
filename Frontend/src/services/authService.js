@@ -1,4 +1,4 @@
-const API_URL = `http://localhost:5000/api/auth`; // Changed from :5000
+const API_URL = `https://anudesh.onrender.com/api/auth`; // Changed from :5000
 
 const authService = {
   login: async (username, password, role, faculty) => {

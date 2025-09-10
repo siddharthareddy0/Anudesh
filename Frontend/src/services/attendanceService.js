@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/attendance`;
+const API_URL = `https://anudesh.onrender.com/attendance`;
 
 const attendanceService = {
   faculties: async () => {

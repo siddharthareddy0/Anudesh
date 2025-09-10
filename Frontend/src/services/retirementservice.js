@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = `http://localhost:5000/retire`;
+const API_URL = `https://anudesh.onrender.com/retire`;
 
 class RetirementService {
     static async getRetirementsByYear(year, type, category) {

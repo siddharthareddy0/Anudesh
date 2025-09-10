@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/part2`;
+const API_URL = `https://anudesh.onrender.com/part2`;
 
 const part2orderService = {
   fetchLeaveRecords: async ({ army_no,fromDate,toDate, leave_type }) => {

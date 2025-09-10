@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/man-power`;
+const API_URL = `https://anudesh.onrender.com/man-power`;
 
 const manPowerService = {
   fetchCategory: async () => {

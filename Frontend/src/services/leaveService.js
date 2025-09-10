@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/leave`;
+const API_URL = `https://anudesh.onrender.com/leave`;
 
 const leaveService = {
   fetchEmployees : async () => {

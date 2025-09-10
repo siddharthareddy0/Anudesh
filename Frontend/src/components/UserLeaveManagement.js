@@ -17,7 +17,7 @@ const LeaveHistory = ({ armyNo }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/leave-history/${armyNo}`, {
+        const response = await axios.get(`https://anudesh.onrender.com/leave-history/${armyNo}`, {
           withCredentials: true,
         });
         setHistory(Array.isArray(response.data) ? response.data : []); // Assuming backend returns an array

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/info`;
+const API_URL = `https://anudesh.onrender.com/info`;
 
 const infoService = {
   dept: async () => {

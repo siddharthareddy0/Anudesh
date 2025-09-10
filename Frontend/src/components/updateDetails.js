@@ -22,7 +22,7 @@ const UpdateRegistration = ({onBack}) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`const API_URL = http://localhost:5000/employeesAll/${id}`);
+        const response = await fetch(`const API_URL = https://anudesh.onrender.com/employeesAll/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

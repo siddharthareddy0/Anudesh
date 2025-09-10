@@ -25,7 +25,7 @@ const app = express();
 app.use(
   cors({
    // origin: process.env.REACT_APP_API_URL, // Ensure the frontend can communicate
-     origin: "http://localhost:3000" ,
+     origin: "https://anudesh.onrender.com" ,
     methods: "GET,POST,PUT,DELETE,PATCH",
     credentials: true, // Allow cookies and authorization headers
   })

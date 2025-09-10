@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = `http://localhost:5000/kinderedroll`;
+const API_URL = `https://anudesh.onrender.com/kinderedroll`;
 
 const kinderedRollService = {
   submitForm: async (formData) => {
